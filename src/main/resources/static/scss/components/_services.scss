@@ -1,0 +1,34 @@
+.services {
+  padding-top: 94px;
+  display: none
+}
+
+.services__cards {
+  @include flexbox(row, flex-start, stretch, nowrap, 30px);
+}
+
+.services__card {
+  position: relative;
+}
+
+.services__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.services__card-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8); 
+  letter-spacing: 0.42px;
+  padding: 27px 0;
+  line-height: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff; 
+  z-index: 1; 
+}

@@ -1,0 +1,36 @@
+@import "./global/base/reset";
+@import "./utils/variables";
+@import "./global/base/typography";
+@import "./global/base/base";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+
+//
+@import "./global/layout/layout";
+//
+@import "./global/header";
+
+@import "./components/hero";
+
+
+@import "./global/title";
+@import "./components/about";
+
+@import "./components/services";
+
+@import "./components/team";
+
+
+@import "./components/clients";
+
+
+
+@import "./components/backdrop";
+@import "./global/footer";
+
+
+
+
+
+
+

@@ -1,0 +1,175 @@
+.portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  
+  .portfolio-filter-list {
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    font-size: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .filter-link {
+    padding: 6px 22px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $color-text-title;
+    background-color: $color-background-secondary;
+    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: none;
+  
+    &:hover {
+      background-color: $color-hover;
+      color: $color-text-contrast;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+  
+  .projeckts {
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, 370px);
+    // column-gap: 30px;
+    // row-gap: 30px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+
+  }
+  
+  .projeckt {
+    border: 1px solid $color-border;
+    max-width: 450px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    &:hover {
+      box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+      background: #fff;
+      border-radius: 4px;
+    }
+  
+    .title-category {
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: stretch;
+      gap: 4px;
+    }
+  
+    .projeckt-title {
+      line-height: 2;
+      font-weight: 700;
+      font-size: 18px;
+    }
+  
+    .projeckt-category {
+      line-height: 1.875;
+      color: $color-text;
+      font-size: 16px;
+    }
+  
+    .projeckt-photo {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+  
+      &:hover .projeckt-overlay {
+        transform: translateY(0);
+      }
+    }
+  
+    .projeckt-overlay {
+      background-color: rgba(33, 150, 243, 0.8);
+      color: $color-text-contrast;
+      flex-grow: 1;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateY(100%);
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      padding-right: 24px;
+      padding-left: 24px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .overlay-text {
+      font-size: 18px;
+    }
+  
+    &.slide-top {
+      animation: slide-top 250ms linear 0s;
+    }
+  
+    &.slide-right {
+      animation: slide-right 250ms linear 0s;
+    }
+  
+    &.slide-left {
+      animation: slide-left 250ms linear 0s;
+    }
+  }
+  
+  @keyframes slide-top {
+    0% {
+      transform: translateY(30%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-right {
+    0% {
+      transform: translate(30%, 30%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0%, 0%);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-left {
+    0% {
+      transform: translate(-30%, 30%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0%, 0%);
+      opacity: 1;
+    }
+  }
+
+
+  @media (min-width: 768px) {
+    .projeckts {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 370px);
+      column-gap: 30px;
+      row-gap: 30px;
+      justify-content: center;
+    }
+    
+  }
+
+  
