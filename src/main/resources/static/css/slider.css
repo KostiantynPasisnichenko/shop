@@ -1,0 +1,59 @@
+/* Слайдер */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 93vh; /* Висота слайдера */
+    overflow: hidden; /* Сховати слайди, які виходять за межі */
+    text-align: center;
+}
+.slider__content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+/* Заголовок */
+.slider__title {
+    line-height: 1.363;
+    font-size: 26px;
+    color: #2196f3;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Кнопка */
+.slider__button {
+    line-height: 1.875;
+    background-color: #2196f3;
+    color: #333333;
+    padding: 10px 32px;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slider__button:hover {
+    border-radius: 0px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Контейнер для слайдера */
+.slideshow {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out; /* Плавний перехід для зміщення слайдів */
+}
+
+/* Слайд */
+.slide {
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

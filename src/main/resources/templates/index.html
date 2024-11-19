@@ -23,13 +23,14 @@
   crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/main-portfolio.css">
+  <link rel="stylesheet" href="/css/slider.css">
 </head>
- 
+
 <body>
-  <header class="header">
+  <header class="header header__absolut">
     <div class="container header__container">
       <a href="#" class="logo">
-        <img src="/img/logo/logo-header.webp" alt="logo-header" class="header__logo-image">
+        <img src="/img/logo/logo.png" alt="logo-header" class="header__logo-image">
       </a>
         <div class="header__contact-list">
           <nav class="header__nav">
@@ -38,7 +39,7 @@
                 <a href="#" rel="preconnect" class="header__nav-link header__nav-link--active">Студія</a>
               </li>
               <li class="header__nav-item">
-                <a href="" rel="preconnect" class="header__nav-link ">Портфоліо</a>
+                <a href="/gallery" rel="preconnect" class="header__nav-link ">Портфоліо</a>
               </li>
               <li class="header__nav-item">
                 <a href="#" rel="preconnect" class="header__nav-link">Контакти</a>
@@ -71,13 +72,31 @@
     </div>
   </header>  
     <main class="main">
-      <!-- перый блок/ hero -->
-      <section class="hero">
-        <div class="hero__container container">
-            <h1 class="hero__title">Ефективні рішення для <br>вашого бізнесу</h1>
-            <button class="hero__button" data-modal-open>Замовити послугу</button>
+
+        <div class="slider">
+            <div class="slider__content">
+                <h1 class="slider__title" style="padding-bottom: 20px; font-size: 44px;">Продаж взуття</h1>
+                <button class="slider__button" data-modal-open>Замовити послугу</button>
+            </div>
+
+            <div class="slideshow">
+                <div class="slide">
+                    <img src="/img/hero/img_slider1.jpg" alt="Image 1">
+                </div>
+                <div class="slide">
+                    <img src="/img/hero/img_slider2.jpg" alt="Image 2">
+                </div>
+                <div class="slide">
+                    <img src="/img/hero/img_slider3.jpg" alt="Image 3">
+                </div>
+                <div class="slide">
+                    <img src="/img/hero/img_slider4.jpg" alt="Image 4">
+                </div>
+            </div>
         </div>
-    </section>
+
+        <!-- перый блок/ hero -->
+
    
       <!-- "про нас/список преимуществ" -->
       <section class="about" data-aos="fade-up">
@@ -85,41 +104,38 @@
             <ul class="about__list">
                 <li class="about__item">
                     <div class="about__photo">
-                        <img src="/img/about-img/antenna.webp" alt="antenna" class="about__img">
+                        <img src="/img/about-img/eye.svg" alt="eye" class="about__img">
                     </div>
-                    <h2 class="about__title">УВАГА ДО ДЕТАЛЕЙ</h2>
+                    <h2 class="about__title">👟 УВАГА ДО ДЕТАЛЕЙ</h2>
                     <p class="about__description">
-                        Ідейні міркування, і навіть початок повсякденної роботи з
-                        формування позиції.
+                        Ми ретельно підбираємо кожну пару взуття, щоб забезпечити комфорт, стиль та довговічність.
                     </p>
                 </li>
                 <li class="about__item">
                     <div class="about__photo">
-                        <img src="/img/about-img/clock.webp" alt="clock" class="about__img">
+                        <img src="/img/about-img/truck.svg" alt="truck" class="about__img">
                     </div>
-                    <h2 class="about__title">ПУНКТУАЛЬНІСТЬ</h2>
+                    <h2 class="about__title">⏰ ПУНКТУАЛЬНІСТЬ</h2>
                     <p class="about__description">
-                        Завдання організації, особливо рамки і місце навчання кадрів тягне
-                        у себе.
+                        Швидка доставка прямо до вашого дому — вчасно, як ви очікуєте.
                     </p>
                 </li>
                 <li class="about__item">
                     <div class="about__photo">
-                        <img src="/img/about-img/diagram.webp" alt="diagram" class="about__img">
+                        <img src="/img/about-img/stats-dots.svg" alt="diagram" class="about__img">
                     </div>
-                    <h2 class="about__title">ПЛАНУВАННЯ</h2>
+                    <h2 class="about__title">📈 ПЛАНУВАННЯ</h2>
                     <p class="about__description">
-                        Так само консультація з широким активом значною мірою зумовлює.
+                        Ми завжди оновлюємо наш асортимент, враховуючи ваші потреби та модні тенденції.
                     </p>
                 </li>
                 <li class="about__item">
                     <div class="about__photo">
-                        <img src="/img/about-img/astronaut.webp" alt="astronaut" class="about__img">
+                        <img src="/img/about-img/cool.svg" alt="cool" class="about__img">
                     </div>
-                    <h2 class="about__title">СУЧАСНІ ТЕХНОЛОГІЇ</h2>
+                    <h2 class="about__title">🌍 ВИСОКА ЯКІСТЬ</h2>
                     <p class="about__description">
-                        Значимість цих проблем настільки очевидна, що реалізація планових
-                        завдань.
+                        Ми пропонуємо лише перевірені бренди та якісні матеріали для вашого комфорту.
                     </p>
                 </li>
             </ul>
@@ -165,135 +181,47 @@
     <div class="team__container container">
         <h2 class="team__title">Наша команда</h2>
         <div class="team__list">
-            <!-- Первый участник команды -->
+            <!-- Первый пример -->
             <article class="team__item">
                 <div class="team__photo">
-                    <img src="/img/team/product.jpg" alt="Ігор" class="team__img" />
+                    <img src="/img/shoes-example/first_example.jpg" alt="first_example" class="team__img" />
                 </div>
                 <div class="team__info">
-                    <h2 class="team__name">Ігор Дем'яненко</h2>
-                    <p class="team__position">Product Designer</p>
-                    <div class="team__socials">
-                        <div class="team__icon">
-                            <svg width="24" height="24" class="team__icon-svg">
-                                <use href="/img/team/symbol-defs.svg#icon-instagram"></use>
-                            </svg>
-                        </div>
-                        <div class="team__icon">
-                            <svg width="24" height="24" class="team__icon-svg">
-                                <use href="/img/team/symbol-defs.svg#icon-twitter"></use>
-                            </svg>
-                        </div>
-                        <div class="team__icon">
-                            <svg width="24" height="24" class="team__icon-svg">
-                                <use href="/img/team/symbol-defs.svg#icon-facebook"></use>
-                            </svg>
-                        </div>
-                        <div class="team__icon">
-                            <svg width="24" height="24" class="team__icon-svg">
-                                <use href="/img/team/symbol-defs.svg#icon-linkedin"></use>
-                            </svg>
-                        </div>
-                    </div>
+                    <h2 class="team__name">Asics Gel-Nyc Graphite</h2>
+                    <p class="team__position"></p>
                 </div>
             </article>
 
-            <!-- Второй участник команды -->
+            <!-- Второй пример -->
             <article class="team__item">
                 <div class="team__photo">
-                    <img src="/img/team/frontend.jpg" alt="Ольга" class="team__img" />
+                    <img src="/img/shoes-example/second_example.jpg" alt="second_example" class="team__img" />
                 </div>
                 <div class="team__info">
-                    <h2 class="team__name">Ольга Рєпіна</h2>
-                    <p class="team__position">Frontend Developer</p>
-                    <div class="team__socials">
-                        <div class="team__icon">
-                            <svg width="24" height="24" class="team__icon-svg">
-                                <use href="/img/team/symbol-defs.svg#icon-instagram"></use>
-                            </svg>
-                        </div>
-                        <div class="team__icon">
-                            <svg width="24" height="24" class="team__icon-svg">
-                                <use href="/img/team/symbol-defs.svg#icon-twitter"></use>
-                            </svg>
-                        </div>
-                        <div class="team__icon">
-                            <svg width="24" height="24" class="team__icon-svg">
-                                <use href="/img/team/symbol-defs.svg#icon-facebook"></use>
-                            </svg>
-                        </div>
-                        <div class="team__icon">
-                            <svg width="24" height="24" class="team__icon-svg">
-                                <use href="/img/team/symbol-defs.svg#icon-linkedin"></use>
-                            </svg>
-                        </div>
-                    </div>
+                    <h2 class="team__name">New Balance 740</h2>
+                    <p class="team__position"></p>
                 </div>
             </article>
 
-            <!-- Третий участник команды -->
+            <!-- Третий пример -->
             <article class="team__item">
                 <div class="team__photo">
-                    <img src="/img/team/marketing.jpg" alt="Микола" class="team__img" />
+                    <img src="/img/shoes-example/third_example.jpg" alt="third_example" class="team__img" />
                 </div>
                 <div class="team__info">
-                    <h2 class="team__name">Микола Тарасов</h2>
-                    <p class="team__position">Marketing</p>
-                    <div class="team__socials">
-                        <div class="team__icon">
-                            <svg width="24" height="24" class="team__icon-svg">
-                                <use href="/img/team/symbol-defs.svg#icon-instagram"></use>
-                            </svg>
-                        </div>
-                        <div class="team__icon">
-                            <svg width="24" height="24" class="team__icon-svg">
-                                <use href="/img/team/symbol-defs.svg#icon-twitter"></use>
-                            </svg>
-                        </div>
-                        <div class="team__icon">
-                            <svg width="24" height="24" class="team__icon-svg">
-                                <use href="/img/team/symbol-defs.svg#icon-facebook"></use>
-                            </svg>
-                        </div>
-                        <div class="team__icon">
-                            <svg width="24" height="24" class="team__icon-svg">
-                                <use href="/img/team/symbol-defs.svg#icon-linkedin"></use>
-                            </svg>
-                        </div>
-                    </div>
+                    <h2 class="team__name">Nike M2K Tekno </h2>
+                    <p class="team__position"></p>
                 </div>
             </article>
 
-            <!-- Четвертый участник команды -->
+            <!-- Четвертый пример -->
             <article class="team__item">
                 <div class="team__photo">
-                    <img src="/img/team/ui.jpg" alt="Михайло" class="team__img" />
+                    <img src="/img/shoes-example/four_example.jpg" alt="four_example" class="team__img" />
                 </div>
                 <div class="team__info">
-                    <h2 class="team__name">Михайло Єрмаков</h2>
-                    <p class="team__position">UI Designer</p>
-                    <div class="team__socials">
-                        <div class="team__icon">
-                            <svg width="24" height="24" class="team__icon-svg">
-                                <use href="/img/team/symbol-defs.svg#icon-instagram"></use>
-                            </svg>
-                        </div>
-                        <div class="team__icon">
-                            <svg width="24" height="24" class="team__icon-svg">
-                                <use href="/img/team/symbol-defs.svg#icon-twitter"></use>
-                            </svg>
-                        </div>
-                        <div class="team__icon">
-                            <svg width="24" height="24" class="team__icon-svg">
-                                <use href="/img/team/symbol-defs.svg#icon-facebook"></use>
-                            </svg>
-                        </div>
-                        <div class="team__icon">
-                            <svg width="24" height="24" class="team__icon-svg">
-                                <use href="/img/team/symbol-defs.svg#icon-linkedin"></use>
-                            </svg>
-                        </div>
-                    </div>
+                    <h2 class="team__name">Nike V2K Run</h2>
+                    <p class="team__position"></p>
                 </div>
             </article>
         </div>
@@ -303,37 +231,25 @@
       
 <section class="clients" data-aos="zoom-in">
   <div class="clients__inner">
-      <h2 class="clients__title">Постійні клієнти</h2>
+      <h2 class="clients__title">Популярні бренди взуття</h2>
       <div class="clients__cards">
           <div class="clients__card">
-              <svg width="106" height="60" class="clients__icon">
-                  <use href="/img/clients/symbol-defs.svg#icon-ya-co"></use>
-              </svg>
+              <img src="/img/brands/logo_nike.svg" alt="" class="clients__icon">
           </div>
           <div class="clients__card">
-              <svg width="106" height="60" class="clients__icon">
-                  <use href="/img/clients/symbol-defs.svg#icon-tag-line"></use>
-              </svg>
+              <img src="/img/brands/adidas_logo.svg" alt="" class="clients__icon">
           </div>
           <div class="clients__card">
-              <svg width="106" height="60" class="clients__icon">
-                  <use href="/img/clients/symbol-defs.svg#icon-company"></use>
-              </svg>
+              <img src="/img/brands/asics_logo.svg" alt="" class="clients__icon">
           </div>
           <div class="clients__card">
-              <svg width="106" height="60" class="clients__icon">
-                  <use href="/img/clients/symbol-defs.svg#icon-foster-peters"></use>
-              </svg>
+              <img src="/img/brands/new_balance_logo.svg" alt="" class="clients__icon">
           </div>
           <div class="clients__card">
-              <svg width="106" height="60" class="clients__icon">
-                  <use href="/img/clients/symbol-defs.svg#icon-brand"></use>
-              </svg>
+              <img src="/img/brands/salomon_logo_2022.svg" alt="" class="clients__icon">
           </div>
           <div class="clients__card">
-              <svg width="106" height="60" class="clients__icon">
-                  <use href="/img/clients/symbol-defs.svg#icon-tag-line"></use>
-              </svg>
+              <img src="/img/brands/vans-logo.svg" alt="" class="clients__icon">
           </div>
       </div>
   </div>
@@ -352,7 +268,7 @@
             <li class="footer__info-item">
               <div class="footer__photo">
                 <a href="#" class="footer__logo">
-                  <img src="/img/logo/logo-footer.webp" alt="logo-footer" class="footer__logo-image">
+                  <img src="/img/logo/logo.png" alt="logo-footer" class="footer__logo-image">
                 </a>
               </div>
               <address class="footer__info-address">
@@ -374,23 +290,23 @@
             <li class="footer__social-network-items">
               <div class="footer__icons">
                 <div class="footer__icon-block">
-                  <svg width="20" height="20" viewBox="0 0 20 20" class="footer__icon">
-                    <use href="/img/team/symbol-defs.svg#icon-instagram"></use>
+                  <svg width="20" height="20" viewBox="0 0 20 20" class="footer__icon" >
+                      <img src="/img/social-logo/instagram.svg" alt="instagram">
                   </svg>
                 </div>
                 <div class="footer__icon-block">
                   <svg width="20" height="20" viewBox="0 0 20 20" class="footer__icon">
-                    <use href="/img/team/symbol-defs.svg#icon-twitter"></use>
+                      <img src="/img/social-logo/x.svg" alt="x">
+                  </svg>
+                </div>
+                <div class="footer__icon-block">
+                  <svg width="20" height="20" viewBox="0 0 20 20" class="footer__icon">\
+                      <img src="/img/social-logo/facebook.svg" alt="facebook">
                   </svg>
                 </div>
                 <div class="footer__icon-block">
                   <svg width="20" height="20" viewBox="0 0 20 20" class="footer__icon">
-                    <use href="/img/team/symbol-defs.svg#icon-facebook"></use>
-                  </svg>
-                </div>
-                <div class="footer__icon-block">
-                  <svg width="20" height="20" viewBox="0 0 20 20" class="footer__icon">
-                    <use href="/img/team/symbol-defs.svg#icon-linkedin"></use>
+                      <img src="/img/social-logo/linkedin.svg" alt="linkedin">
                   </svg>
                 </div>
               </div>
@@ -408,7 +324,7 @@
               <button type="submit" class="footer__newsletter-button">
                 Підписатися
                 <svg width="24" height="24" viewBox="0 0 24 24" class="footer__newsletter-icon">
-                  <use href="/img/footer-icons/symbol-defs.svg#icon-telegram" class="footer__newsletter-icon-use"></use>
+                  <use href="static/img/footer-icons/symbol-defs.svg#icon-telegram" class="footer__newsletter-icon-use"></use>
                 </svg>
               </button>
             </li>
@@ -475,7 +391,7 @@
       AOS.init();
     </script>
       <script src="/js/modal.js"></script>
-      
+    <script src="/js/slider.js"></script>
     </body>
   </html>
 

@@ -116,7 +116,7 @@ input {
   text-shadow: none;
   display: inline-block;
   text-align: start;
-  -webkit-appearance: auto;
+  -webkit-appearance: uto;
      -moz-appearance: auto;
           appearance: auto;
   cursor: text;
@@ -555,11 +555,11 @@ img {
   justify-content: center;
 }
 
-.footer__logo,
-.footer__logo-image {
-  width: 150px;
-  height: 20px;
-}
+/*.footer__logo,*/
+/*.footer__logo-image {*/
+/*  width: 150px;*/
+/*  height: 20px;*/
+/*}*/
 
 @media (min-width: 768px) {
   .footer__container {
@@ -589,11 +589,11 @@ img {
     display: flex;
     justify-content: center;
   }
-  .footer__logo,
-  .footer__logo-image {
-    width: 150px;
-    height: 20px;
-  }
+  /*.footer__logo,*/
+  /*.footer__logo-image {*/
+  /*  width: 150px;*/
+  /*  height: 20px;*/
+  /*}*/
   .footer__newsletter {
     grid-column: 1/3;
     grid-row: 3;

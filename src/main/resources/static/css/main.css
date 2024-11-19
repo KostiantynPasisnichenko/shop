@@ -263,7 +263,7 @@ img {
 
 .hero::before {
   content: "";
-  background-image: url(../img/hero/backbackground-hero.png);
+  background-image: url(../img/hero/white-nike.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -946,8 +946,8 @@ input::-webkit-inner-spin-button {
 
 .footer__logo,
 .footer__logo-image {
-  width: 150px;
-  height: 20px;
+  /*width: 150px;*/
+  /*height: 20px;*/
 }
 
 @media (min-width: 768px) {
@@ -978,11 +978,11 @@ input::-webkit-inner-spin-button {
     display: flex;
     justify-content: center;
   }
-  .footer__logo,
-  .footer__logo-image {
-    width: 150px;
-    height: 20px;
-  }
+  /*.footer__logo,*/
+  /*.footer__logo-image {*/
+  /*  width: 150px;*/
+  /*  height: 20px;*/
+  /*}*/
   .footer__newsletter {
     grid-column: 1/3;
     grid-row: 3;

@@ -20,7 +20,7 @@
 }
 
 .about__photo {
-  background-color: $color-background-secondary;
+  background-color: var(--color-background-secondary);
   display: flex;
   justify-content: center;
 }
@@ -40,7 +40,7 @@
 }
 
 .about__description {
-  color: $color-text;
+  color: var(--color-text);
   font-weight: 400;
 }
 
