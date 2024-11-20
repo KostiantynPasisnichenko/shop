@@ -76,7 +76,7 @@
         <div class="slider">
             <div class="slider__content">
                 <h1 class="slider__title" style="padding-bottom: 20px; font-size: 44px;">Продаж взуття</h1>
-                <button class="slider__button" data-modal-open>Замовити послугу</button>
+                <button class="slider__button"><a href="/form">Увійти/Зареєструватися</a></button> <!--data-modal-open-->
             </div>
 
             <div class="slideshow">
@@ -334,58 +334,58 @@
     </footer>
     
     
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button class="modal__btn-close btn" data-modal-close>
-          <svg width="20" height="20" viewBox="0 0 20 20" class="modal__icon">
-            <use href="/img/modal-icons/close-icon/symbol-defs.svg#icon-closebtn"></use>
-          </svg>
-        </button>
-        <div class="modal__content">
-          <h3 class="modal__title">
-            Залиште свої дані, ми вам передзвонимо
-          </h3>
-          <form class="modal__form contact-form" novalidate>
-            <div class="modal__form-group form-group">
-              <div class="form-group__input-group group-input">
-                <label class="group-input__label form-label">Ім'я</label>
-                <input type="text" id="user-name" class="group-input__input form-input" minlength="2" required>
-                <svg width="20" height="20" viewBox="0 0 20 20" class="group-input__icon input-icon">
-                  <use href="/img/modal-icons/input-icons/symbol-defs.svg#icon-user"></use>
-                </svg>
-              </div>
-              <div class="form-group__input-group group-input">
-                <label class="group-input__label form-label">Телефон</label>
-                <input type="number" id="user-phone" class="group-input__input form-input" required>
-                <svg width="20" height="20" viewBox="0 0 20 20" class="group-input__icon input-icon">
-                  <use href="/img/modal-icons/input-icons/symbol-defs.svg#icon-phone"></use>
-                </svg>
-              </div>
-              <div class="form-group__input-group group-input">
-                <label class="group-input__label form-label">Пошта</label>
-                <input type="email" id="user-mail" class="group-input__input form-input" required>
-                <svg width="20" height="20" viewBox="0 0 20 20" class="group-input__icon input-icon">
-                  <use href="/img/modal-icons/input-icons/symbol-defs.svg#icon-envelope"></use>
-                </svg>
-              </div>
-              <div class="form-group__input-group group-input">
-                <label class="group-input__label form-label">Коментар</label>
-                <textarea id="user-message" class="group-input__input form-input" placeholder="Введіть текст"></textarea>
-              </div>
-            </div>
-            <div class="modal__form-checkbox form-checkbox">
-              <input type="checkbox" id="subscription" class="form-checkbox__input input-checkbox" required>
-              <label for="subscription" class="form-checkbox__label label-checkbox">
-                Погоджуюся з розсилкою та приймаю <a href="https://web-studio.kiev.ua/dogovir-pro-umovy-ta-pravyla-vykorystannya-sajtu/" target="_blank" class="label-checkbox__link checkbox-link">Умови договору</a>
-              </label>
-            </div>
-            <div class="modal__form-submit form-submit">
-              <button class="form-submit__button send-submit" type="submit">Відправити</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>    
+<!--    <div class="backdrop is-hidden" data-modal>-->
+<!--      <div class="modal">-->
+<!--        <button class="modal__btn-close btn" data-modal-close>-->
+<!--          <svg width="20" height="20" viewBox="0 0 20 20" class="modal__icon">-->
+<!--            <use href="/img/modal-icons/close-icon/symbol-defs.svg#icon-closebtn"></use>-->
+<!--          </svg>-->
+<!--        </button>-->
+<!--        <div class="modal__content">-->
+<!--          <h3 class="modal__title">-->
+<!--            Залиште свої дані, ми вам передзвонимо-->
+<!--          </h3>-->
+<!--          <form class="modal__form contact-form" novalidate>-->
+<!--            <div class="modal__form-group form-group">-->
+<!--              <div class="form-group__input-group group-input">-->
+<!--                <label class="group-input__label form-label">Ім'я</label>-->
+<!--                <input type="text" id="user-name" class="group-input__input form-input" minlength="2" required>-->
+<!--                <svg width="20" height="20" viewBox="0 0 20 20" class="group-input__icon input-icon">-->
+<!--                  <use href="/img/modal-icons/input-icons/symbol-defs.svg#icon-user"></use>-->
+<!--                </svg>-->
+<!--              </div>-->
+<!--              <div class="form-group__input-group group-input">-->
+<!--                <label class="group-input__label form-label">Телефон</label>-->
+<!--                <input type="number" id="user-phone" class="group-input__input form-input" required>-->
+<!--                <svg width="20" height="20" viewBox="0 0 20 20" class="group-input__icon input-icon">-->
+<!--                  <use href="/img/modal-icons/input-icons/symbol-defs.svg#icon-phone"></use>-->
+<!--                </svg>-->
+<!--              </div>-->
+<!--              <div class="form-group__input-group group-input">-->
+<!--                <label class="group-input__label form-label">Пошта</label>-->
+<!--                <input type="email" id="user-mail" class="group-input__input form-input" required>-->
+<!--                <svg width="20" height="20" viewBox="0 0 20 20" class="group-input__icon input-icon">-->
+<!--                  <use href="/img/modal-icons/input-icons/symbol-defs.svg#icon-envelope"></use>-->
+<!--                </svg>-->
+<!--              </div>-->
+<!--              <div class="form-group__input-group group-input">-->
+<!--                <label class="group-input__label form-label">Коментар</label>-->
+<!--                <textarea id="user-message" class="group-input__input form-input" placeholder="Введіть текст"></textarea>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="modal__form-checkbox form-checkbox">-->
+<!--              <input type="checkbox" id="subscription" class="form-checkbox__input input-checkbox" required>-->
+<!--              <label for="subscription" class="form-checkbox__label label-checkbox">-->
+<!--                Погоджуюся з розсилкою та приймаю <a href="https://web-studio.kiev.ua/dogovir-pro-umovy-ta-pravyla-vykorystannya-sajtu/" target="_blank" class="label-checkbox__link checkbox-link">Умови договору</a>-->
+<!--              </label>-->
+<!--            </div>-->
+<!--            <div class="modal__form-submit form-submit">-->
+<!--              <button class="form-submit__button send-submit" type="submit">Відправити</button>-->
+<!--            </div>-->
+<!--          </form>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>    -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();

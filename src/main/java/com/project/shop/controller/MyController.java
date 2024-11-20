@@ -15,4 +15,9 @@ public class MyController {
     public String gallery() {
         return "gallery";
     }
+
+    @GetMapping("/form")
+    public String form() {
+        return "form";
+    }
 }
