@@ -19,5 +19,4 @@ public class MyController {
     @GetMapping("/form")
     public String form() {
         return "form";
-    }
-}
+    }}
