@@ -27,7 +27,7 @@
 </head>
 
 <body>
-  <header class="header header__absolut">
+  <header class="header header__absolute">
     <div class="container header__container">
       <a href="#" class="logo">
         <img src="/img/logo/logo.png" alt="logo-header" class="header__logo-image">
@@ -54,7 +54,7 @@
                 <svg width="106" height="60" class="header__contact-icon">
                   <use href="/img/header-icons/symbol-defs.svg#icon-envelope" fill="currentColor"></use>
                 </svg>
-                
+
                 info@devstudio.com
               </a>
             </li>
@@ -68,7 +68,20 @@
               </a>
             </li>
           </ul>
+
       </div>
+        <ul class="header__contact">
+            <li class="header__nav-item">
+                <div class="dropdown">
+                    <a href="#" class="header__nav-link" id="username" onclick="toggleDropdown()" th:text="${username}">username</a>
+                    <ul class="dropdown-menu" id="dropdownMenu">
+                        <li><a href="/order-status" class="dropdown-item">Статус замовлення</a></li>
+                        <li><a href="/profile" class="dropdown-item">Профіль</a></li>
+                        <li><a href="/logout" class="dropdown-item">Вийти</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
     </div>
   </header>  
     <main class="main">
@@ -76,7 +89,7 @@
         <div class="slider">
             <div class="slider__content">
                 <h1 class="slider__title" style="padding-bottom: 20px; font-size: 44px;">Продаж взуття</h1>
-                <button class="slider__button"><a href="/form">Увійти/Зареєструватися</a></button> <!--data-modal-open-->
+                <button class="slider__button"><a href="/login">Увійти/Зареєструватися</a></button> <!--data-modal-open-->
             </div>
 
             <div class="slideshow">
@@ -390,8 +403,9 @@
     <script>
       AOS.init();
     </script>
-      <script src="/js/modal.js"></script>
+    <script src="/js/modal.js"></script>
     <script src="/js/slider.js"></script>
+    <script src="/js/dropdown.js"></script>
     </body>
   </html>
 

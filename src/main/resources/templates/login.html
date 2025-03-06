@@ -19,11 +19,11 @@
     <input type="checkbox" id="check">
     <div class="login form">
         <header>Login</header>
-        <form action="#" >
-            <input type="text" class="text-input" placeholder="Enter your email">
-            <input type="password" class="text-input" placeholder="Enter your password">
+        <form th:action="@{/process-login}" method="post">
+            <input type="text" class="text-input" name="username" placeholder="Enter your username">
+            <input type="password" class="text-input" name="password" placeholder="Enter your password">
             <a href="#">Forgot password?</a>
-            <input type="button" class="button" value="Login">
+            <input type="submit" class="button" value="Login">
         </form>
         <div class="signup">
         <span class="signup">Don't have an account?
@@ -34,6 +34,7 @@
     <div class="registration form">
         <header>Signup</header>
         <form action="#">
+            <input type="text" placeholder="Enter your username">
             <input type="text" placeholder="Enter your email">
             <input type="password" placeholder="Create a password">
             <input type="password" placeholder="Confirm your password">

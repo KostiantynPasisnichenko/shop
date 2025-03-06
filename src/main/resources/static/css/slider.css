@@ -5,6 +5,8 @@
     height: 93vh; /* Висота слайдера */
     overflow: hidden; /* Сховати слайди, які виходять за межі */
     text-align: center;
+    z-index: 1;
+
 }
 .slider__content{
     position: absolute;

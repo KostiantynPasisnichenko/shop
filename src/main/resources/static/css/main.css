@@ -253,6 +253,40 @@ img {
     gap: 30px;
   }
 }
+
+/* Сховати меню за замовчуванням */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  top: 30px;  /* Розміщує меню нижче елемента */
+  right: 0;   /* Випадаюче меню вирівнюється праворуч */
+  z-index: 10;
+}
+
+/* Стилі для елементів списку */
+.dropdown-menu .dropdown-item {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+/* При наведенні на елемент */
+.dropdown-menu .dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Стиль при наведенні на username */
+.header__nav-item:hover .dropdown-menu {
+  display: block; /* Відображення меню при наведенні */
+}
+
 .hero {
   background-color: #2f303a;
   padding-top: 200px;

@@ -34,12 +34,27 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(HttpMethod.GET, "/home").hasAuthority("ROLE_ADMIN")  // Явне використання "ROLE_ADMIN"
-                        .requestMatchers(HttpMethod.POST, "/**").hasAuthority("ROLE_USER")  // Якщо роль USER у вас теж має префікс "ROLE_"
-                        .requestMatchers(HttpMethod.GET, "/form").hasAuthority("ROLE_ADMIN")
-                        .requestMatchers(HttpMethod.GET, "/gallery").hasAuthority("ROLE_USER")
+                        .requestMatchers("/home", "/gallery", "/css/**", "/img/**", "/js/**").permitAll()  // Головна, галерея та статичні файли доступні без логіну
+                        .requestMatchers("/order-status", "/profile").authenticated() // Потрібен логін
                         .anyRequest().authenticated()
                 )
+
+                .formLogin(form -> form
+                        .loginPage("/login")  // Власна сторінка входу
+                        .loginProcessingUrl("/process-login") // Spring Security сам обробляє цей шлях
+                        .defaultSuccessUrl("/home", true)  // Куди перенаправляти після успіху
+                        .failureUrl("/login?error=true")  // Куди перенаправляти після невдалого входу
+                        .permitAll()
+                )
+
+                .logout(logout -> logout
+                        .logoutUrl("/logout")
+                        .logoutSuccessUrl("/home")
+                        .invalidateHttpSession(true)
+                        .clearAuthentication(true)
+                        .permitAll()
+                )
+
                 .httpBasic(Customizer.withDefaults())
                 .csrf(csfr -> csfr.disable());
 
