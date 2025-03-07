@@ -10,16 +10,18 @@ public class MyController {
 
     @GetMapping("/home")
     public String index(Authentication auth, Model model) {
-        String username = auth != null ? auth.getName() : "Guest";
-
+        String username = (auth != null && auth.isAuthenticated()) ? auth.getName() : "Гість";
 
         model.addAttribute("username",username);
         return "index";
     }
 
     @GetMapping("/gallery")
-    public String gallery() {
-        return "gallery";
+    public String gallery(Authentication auth, Model model) {
+        String username = (auth != null && auth.isAuthenticated()) ? auth.getName() : "Гість";
+
+        model.addAttribute("username",username);
+        return "catalog";
     }
 
     @GetMapping("/login")

@@ -24,52 +24,75 @@
   integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" 
   crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="/css/main-portfolio.css">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
-  <header class="header">
-    <div class="header__container container">
-      <a href="#" class="logo">
-        <img src="/img/logo/logo.png" alt="logo-header" class="header__logo-image">
-      </a>
-      <div class="header__contact-list">
-        <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-item">
-              <a href="/home" class="header__nav-link" rel="preconnect">Студія</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link header__nav-link--active" rel="preconnect">Портфоліо</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-        <ul class="header__contact">
-          <li class="header__contact-item">
-            <a href="mailto:info@devstudio.com" class="header__contact-link">
-              <svg width="16" height="16" class="header__contact-icon">
-                <use href="/img/header-icons/symbol-defs.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
+<header class="header header__absolute">
+  <div class="container header__container">
+    <a href="#" class="logo">
+      <img src="/img/logo/logo.png" alt="logo-header" class="header__logo-image">
+    </a>
+    <div class="header__contact-list">
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="/home" rel="preconnect" class="header__nav-link header__nav-link--active">Головна</a>
           </li>
-          <li class="header__contact-item">
-            <a href="tel:+380961111111" class="header__contact-link">
-              <svg width="16" height="16" class="header__contact-icon">
-                <use href="/img/header-icons/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
+          <li class="header__nav-item">
+            <a href="/gallery" rel="preconnect" class="header__nav-link ">Каталог</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" rel="preconnect" class="header__nav-link">Контакти</a>
           </li>
         </ul>
+      </nav>
     </div>
-  </header>
+    <div class="contact-block">
+      <ul class="header__contact">
+        <li class="header__contact-item">
+          <a href="mailto:info@devstudio.com" class="header__contact-link">
+            <svg width="106" height="60" class="header__contact-icon">
+              <use href="/img/header-icons/symbol-defs.svg#icon-envelope" fill="currentColor"></use>
+            </svg>
 
-  <main class="main">
+            info@devstudio.com
+          </a>
+        </li>
+        <li class="header__contact-item">
+          <a href="tel:+380961111111" class="header__contact-link">
+            <svg width="106" height="60" class="header__contact-icon">
+              <use href="/img/header-icons/symbol-defs.svg#icon-envelope" fill="currentColor"></use>
+            </svg>
+
+            +38 096 111 11 11
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <ul class="header__contact">
+        <th:block th:if="${username != 'Гість'}">
+          <a href="#" class="header__nav-link" onclick="toggleDropdown()" th:text="${username}">username</a>
+          <ul class="dropdown-menu" id="dropdownMenu">
+            <li><a href="/order-status" class="dropdown-item">Статус замовлення</a></li>
+            <li><a href="/profile" class="dropdown-item">Профіль</a></li>
+            <li><a href="/logout" class="dropdown-item">Вийти</a></li>
+          </ul>
+        </th:block>
+
+        <th:block th:if="${username == 'Гість'}">
+          <li class="header__nav-item">
+            <a href="/login" class="header__nav-link login-button">Увійти</a>
+          </li>
+        </th:block>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main class="main">
     
       <section class="portfolio">
         <div class="container">
@@ -283,6 +306,7 @@
     </div>
   </footer>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="/js/dropdown.js"></script>
   <script>
     AOS.init();
   </script>

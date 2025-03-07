@@ -36,10 +36,10 @@
           <nav class="header__nav">
             <ul class="header__nav-list">
               <li class="header__nav-item">
-                <a href="#" rel="preconnect" class="header__nav-link header__nav-link--active">Студія</a>
+                <a href="#" rel="preconnect" class="header__nav-link header__nav-link--active">Головна</a>
               </li>
               <li class="header__nav-item">
-                <a href="/gallery" rel="preconnect" class="header__nav-link ">Портфоліо</a>
+                <a href="/gallery" rel="preconnect" class="header__nav-link ">Каталог</a>
               </li>
               <li class="header__nav-item">
                 <a href="#" rel="preconnect" class="header__nav-link">Контакти</a>
@@ -68,20 +68,24 @@
               </a>
             </li>
           </ul>
-
       </div>
+
+      <div>
         <ul class="header__contact">
-            <li class="header__nav-item">
-                <div class="dropdown">
-                    <a href="#" class="header__nav-link" id="username" onclick="toggleDropdown()" th:text="${username}">username</a>
-                    <ul class="dropdown-menu" id="dropdownMenu">
-                        <li><a href="/order-status" class="dropdown-item">Статус замовлення</a></li>
-                        <li><a href="/profile" class="dropdown-item">Профіль</a></li>
-                        <li><a href="/logout" class="dropdown-item">Вийти</a></li>
-                    </ul>
-                </div>
-            </li>
+            <th:block th:if="${username != 'Гість'}">
+                <a href="#" class="header__nav-link" onclick="toggleDropdown()" th:text="${username}">username</a>
+                <ul class="dropdown-menu" id="dropdownMenu">
+                    <li><a href="/order-status" class="dropdown-item">Статус замовлення</a></li>
+                    <li><a href="/profile" class="dropdown-item">Профіль</a></li>
+                    <li><a href="/logout" class="dropdown-item">Вийти</a></li>
+                </ul>
+            </th:block>
+
+            <th:block th:if="${username == 'Гість'}">
+                <span class="header__nav-link">Гість</span>
+            </th:block>
         </ul>
+      </div>
     </div>
   </header>  
     <main class="main">

@@ -175,6 +175,7 @@ img {
   gap: 16px;
 }
 .header__nav-link {
+  user-select: none;
   padding: 8px 16px;
   text-align: center;
   transition-duration: 250ms;
@@ -264,8 +265,8 @@ img {
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 5px;
-  top: 30px;  /* Розміщує меню нижче елемента */
-  right: 0;   /* Випадаюче меню вирівнюється праворуч */
+  top: 60px;  /* Розміщує меню нижче елемента */
+  right: 15%;   /* Випадаюче меню вирівнюється праворуч */
   z-index: 10;
 }
 
@@ -275,6 +276,10 @@ img {
   text-decoration: none;
   color: black;
   display: block;
+}
+
+.login-button {
+  pointer-events: auto;
 }
 
 /* При наведенні на елемент */
