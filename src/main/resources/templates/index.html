@@ -93,7 +93,9 @@
         <div class="slider">
             <div class="slider__content">
                 <h1 class="slider__title" style="padding-bottom: 20px; font-size: 44px;">Продаж взуття</h1>
-                <button class="slider__button"><a href="/login">Увійти/Зареєструватися</a></button> <!--data-modal-open-->
+                    <th:block th:if="${username == 'Гість'}">
+                        <button class="slider__button"><a href="/login">Увійти/Зареєструватися</a></button>
+                    </th:block>
             </div>
 
             <div class="slideshow">

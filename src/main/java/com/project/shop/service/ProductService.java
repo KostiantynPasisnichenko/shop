@@ -1,4 +1,4 @@
 package com.project.shop.service;
 
-public interface ProductRepository {
+public interface ProductService {
 }
